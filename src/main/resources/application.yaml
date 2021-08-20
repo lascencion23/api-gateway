@@ -79,7 +79,7 @@ spring:
         uri: lb://ms-reports
         predicates:
         - Path=/api/ms-reports/**
-        filters: StripPrefix=2       
+        filters: StripPrefix=2        
         
         
 server:
