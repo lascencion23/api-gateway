@@ -62,7 +62,7 @@ spring:
         predicates:
         - Path=/api/ms-current-account/**
         filters: StripPrefix=2
-        
+       
       - id: ms-current-account-transaction
         uri: lb://ms-current-account-transaction
         predicates:
@@ -74,6 +74,13 @@ spring:
         predicates:
         - Path=/api/ms-transfer-bank/**
         filters: StripPrefix=2       
+
+      - id: ms-reports
+        uri: lb://ms-reports
+        predicates:
+        - Path=/api/ms-reports/**
+        filters: StripPrefix=2       
+        
         
 server:
   port: 8090
