@@ -79,10 +79,10 @@ spring:
         filters: StripPrefix=2
 
       - id: ms-reports
-          uri: lb://ms-reports
-          predicates:
-            - Path=/api/ms-reports/**
-          filters: StripPrefix=2
+        uri: lb://ms-reports
+        predicates:
+        - Path=/api/ms-reports/**
+        filters: StripPrefix=2
 
 server:
   port: 8090
