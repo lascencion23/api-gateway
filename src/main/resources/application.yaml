@@ -76,8 +76,14 @@ spring:
         uri: lb://ms-transfer-bank
         predicates:
         - Path=/api/ms-transfer-bank/**
-        filters: StripPrefix=2       
-        
+        filters: StripPrefix=2
+
+      - id: ms-reports
+          uri: lb://ms-reports
+          predicates:
+            - Path=/api/ms-reports/**
+          filters: StripPrefix=2
+
 server:
   port: 8090
     
