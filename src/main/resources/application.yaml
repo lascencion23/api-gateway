@@ -84,6 +84,19 @@ spring:
         - Path=/api/ms-reports/**
         filters: StripPrefix=2
 
+      - id: ms-debit-card
+          uri: lb://ms-debit-card
+          predicates:
+            - Path=/api/ms-debit-card/**
+          filters: StripPrefix=2
+
+      - id: ms-debit-card-transactions
+          uri: lb://ms-debit-card-transactions
+          predicates:
+            - Path=/api/ms-debit-card-transactions/**
+          filters: StripPrefix=2
+
+
 server:
   port: 8090
     
